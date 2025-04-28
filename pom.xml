@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.accessok</groupId>
+    <artifactId>spring</artifactId>
+    <version>1.0-SNAPSHOT</version>
+<!--我们在父项目中使用<packaging>pom</packaging>时，
+意味着该项目本身不包含任何Java代码，也不会执行代码。
+它的主要作用是作为聚合工程或传递依赖。
+这意味着它不会寻找配置文件。
+如果需要配置文件生效，应该将其改为jar。-->
+    <packaging>pom</packaging>
+    <modules>
+        <module>spring1</module>
+        <module>spring2</module>
+        <module>spring3</module>
+        <module>springboot</module>
+    </modules>
+
+</project>

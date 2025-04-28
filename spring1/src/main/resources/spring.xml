@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--让spring去new对象，并管理。配置bean的名称和依赖关系-->
+    <bean class="org.accessok.service.UserServiceImpl1" name="userServiceImpl1">
+        <!--注入依赖-->
+        <!--name为其他UserServiceImpl1中接口对应的名称，ref为其他bean的名称-->
+        <!--相当于配置UserServiceImpl1类中的IUserDao接口的userDao对应的所有实现都是userDao1的对应的类-->
+        <property name="userDao" ref="userDao1"></property>
+    </bean>
+    <bean class="org.accessok.dao.UserDao1" name="userDao1"></bean>
+</beans>
